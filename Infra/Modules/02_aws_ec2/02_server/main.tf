@@ -20,7 +20,7 @@ resource "aws_instance" "ec2_instance" {
         volume_type = "gp3"
     }
 
-    user_data = var.script_name
+    user_data = file(var.script_name)
 
     tags = {
         Name = var.name
