@@ -1,0 +1,8 @@
+/Code/.env
+
+/Infra/.terraform/
+/Infra/.terraform.*
+/Infra/terraform.tfvars
+/Infra/*.tfstate*
+/Infra/*.backup
+/Infra/Modules/02_aws_ec2/01_aws_key_pair/*.pem
