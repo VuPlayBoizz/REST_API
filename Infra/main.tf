@@ -52,7 +52,8 @@ module "application-server" {
     instance_type               = var.instance_type
     key_name                    = module.aws-key-pair.key_name
     subnet_id                   = module.aws-subnet.public_subnet_ids[0]
-    security_groups_id          = [module.aws-security-group.ec2_security_group_id]
+    security_groups_id          = [module.aws-security-group.ec2_security_group_id,
+                                   module.aws-security-group.app_security_group_id]
     script_name                 = var.script_name
     name                        = "App-Server"
     associate_public_ip_address = true 
